@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Expenses</title>
+  
+</head>
+<body>
+  <div class="site-container">
+    <div class="content">
+      <div class="banner">
+        <div class="text">
+          <p class="balance-label">My balance</p>
+          <h1 class="balance-display">$921.48</h1>
+        </div>
+        <img src="./images/logo.svg" alt="logo" class="logo">
+      </div>
+      <div class="graph-card">
+        <h1 class="title">Spending - Last 7 days</h1>
+        <div class="graph-container">
+          <div class="graph-element">
+            <div class="bar-container" id="mon-container">
+              <div class="bar" id="mon-bar"></div>
+              <div class="label mon-label">mon</div>
+            </div>
+            <div class="bar-container" id="tue-container">
+              <div class="bar" id="tue-bar"></div>
+              <div class="label tue-label">tue</div>
+            </div>
+            <div class="bar-container" id="wed-container">
+              <div class="bar maximum" id="wed-bar"></div>
+              <div class="label wed-label">wed</div>
+            </div>
+            <div class="bar-container" id="thu-container">
+              <div class="bar" id="thu-bar"></div>
+              <div class="label thu-label">thu</div>
+            </div>
+            <div class="bar-container" id="fri-container">
+              <div class="bar" id="fri-bar"></div>
+              <div class="label fri-label">fri</div>
+            </div>
+            <div class="bar-container" id="sat-container">
+              <div class="bar" id="sat-bar"></div>
+              <div class="label sat-label">sat</div>
+            </div>
+            <div class="bar-container" id="sun-container">
+              <div class="bar" id="sun-bar"></div>
+              <div class="label sun-label">sun</div>
+            </div>
+
+          </div>
+ 
+          
+        </div>
+        <hr>
+        <div class="month-summary">
+          <div class="total">
+            <h2 class="label">Total this month</h2>
+            <h1 class="total-display">$478.33</h1>
+          </div>
+          <div class="percent">
+            <h3 class="percent-display">+2.4%</h3>
+            <h2 class="label">from last month</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/dbidmead" target="_blank">Drew Bidmead</a>.
+  </div>
+</body>
+<footer>
+  <script src="./app.js"></script>
+</footer>
+</html>
