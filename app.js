@@ -19,15 +19,27 @@ const bars = [
     friBar,
     satBar,
     sunBar
-]
+];
 
 for (let i = 0; i < bars.length; i++) {
     let barHeight = data[i].amount * multiplier;
     bars[i].setAttribute('style', `height:${barHeight}px`);
-    bars[i].addEventListener('click', (e) => {
-        console.log(e.target)
+    let dataPoint = bars[i].parentElement.firstElementChild;
+    dataPoint.clicked = false;
+    bars[i].addEventListener('mouseover', (e) => {
         let dataPoint = e.target.parentElement.firstElementChild;
+        e.target.addEventListener('mouseout', () => {
+            if(!dataPoint.clicked) {
+                dataPoint.setAttribute('style', 'opacity:0');
+            };   
+        })
         dataPoint.textContent = `$${data[i].amount}`;
-        dataPoint.classList.toggle('hidden')
+        dataPoint.setAttribute('style', 'opacity:1');
+    })
+    bars[i].addEventListener('click', (e) => {
+        let dataPoint = e.target.parentElement.firstElementChild;
+        dataPoint.setAttribute('style', dataPoint.clicked ? 'opacity:0' : 'opacity:1');
+        dataPoint.clicked = !dataPoint.clicked;
+        
     })
 }
