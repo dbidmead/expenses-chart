@@ -1,4 +1,4 @@
-import data from './data.json' assert { type: "json" }
+const data = await fetch('./data.json').then(res => res.json());
 
 const barHeight = getComputedStyle(document.querySelector('#mon-container')).height;
 const multiplier = 1.5 * parseInt(barHeight) / 100;
